@@ -6,7 +6,7 @@ class MeuJogo extends JS_CG_2D_API {
     this.velocidadeX = 2;
 
     this.img = new Image();
-    this.img.src = "img/leao.jpg";
+    this.img.src = "img/leao.png";
   }
   atualizar() {
     this.x += this.velocidadeX;
