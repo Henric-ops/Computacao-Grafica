@@ -17,49 +17,53 @@ class MeuJogo extends JS_CG_2D_API {
   }
   desenhar() {
     this.limparTela("lightblue"); // é necessário limpar a tela antes de desenhar novamente
-    this.imagem(this.img, 100, 100);
+    this.imagem(this.img, 20, 80);
     this.preenchimento("blue");
-    this.retangulo(this.x, this.y, 200, 100, Estilo.PREENCHIDO);
+    this.retangulo(this.x, this.y, 140, 70, Estilo.PREENCHIDO);
 
     this.contorno("black");
 
     this.contorno(20, "red");
-    this.retangulo(320, 100, 200, 100, Estilo.PREENCHIDO); // sempre deve colocar o estilo antes de desenhar, no caso, o estilo é preenchido.
+    this.retangulo(220, 80, 140, 70, Estilo.PREENCHIDO); // sempre deve colocar o estilo antes de desenhar, no caso, o estilo é preenchido.
     this.contorno("black");
     this.preenchimento("green");
-    this.retangulo(540, 100, 200, 100, Estilo.LINHAS);
+    this.retangulo(400, 80, 140, 70, Estilo.LINHAS);
 
-    this.linha(100, 350, 300, 450);
+    this.linha(40, 250, 180, 330);
 
     this.preenchimento("yellow");
-    this.linha(500, 350, 700, 450, Estilo.PONTOS);
+    this.linha(220, 250, 360, 330, Estilo.PONTOS);
 
     this.preenchimento("black");
-    this.circulo(200, 500, 200, 100, Estilo.PREENCHIDO);
+    this.circulo(600, 300, 120, 100, Estilo.PREENCHIDO);
 
     this.preenchimento("pink");
-    this.triangulo(300, 100, 250, 200, 350, 200, Estilo.PREENCHIDO);
+    this.triangulo(600, 100, 550, 180, 650, 180, Estilo.PREENCHIDO);
 
     this.preenchimento("green");
     this.paralelogramo(
-      100,
-      100,
-      200,
-      100,
-      250,
-      180,
-      150,
-      180,
+      40,
+      380,
+      160,
+      380,
+      210,
+      450,
+      90,
+      450,
       Estilo.PREENCHIDO,
     );
 
     this.preenchimento("yellow");
-    let x = [100, 200, 250, 180, 120];
-    let y = [100, 80, 150, 220, 180];
+    let x = [300, 400, 450, 380, 320];
+    let y = [380, 360, 430, 500, 460];
     this.poligono(x, y, Estilo.PREENCHIDO);
 
     this.preenchimento("violet");
     this.texto("Pontos: 100", 20, 40, 24, "bold");
+
+
+    this.framesJogador = this.carregarFrames("imagens/frames", 2, 2);
+
   }
 }
 
