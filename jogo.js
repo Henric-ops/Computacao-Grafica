@@ -13,6 +13,7 @@ class MeuJogo extends JS_CG_2D_API {
 
     this.teclas = [];
   }
+
   atualizar() {
     this.jogador.atualizar();
     if (this.jogador.px > this.larguraTela() - this.jogador.l) {
